@@ -4,7 +4,7 @@ import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 
-@ConfigGroup("example")
+@ConfigGroup("helmetcheck")
 public interface HelmetCheckConfig extends Config
 {
 	@ConfigItem(
@@ -16,4 +16,11 @@ public interface HelmetCheckConfig extends Config
 	{
 		return "Hello";
 	}
+
+	@ConfigItem(
+			keyName = "showOverlay",
+			name= "Show Overlay",
+			description = "Toggle the helmet check overlay"
+	)
+	default boolean showOverlay() {return true;}
 }
